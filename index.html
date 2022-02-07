@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- делаем экран адаптивным -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- пишем имя веб-сайту -->
+    <title>Веб-верстка</title>
+    <!-- подключаем таблицу стилей -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!--  -->
+    <div class="content">
+        <!-- здесь будет карточка с классом .card -->
+        <div class="card">
+            <!-- передняя сторона карточки - блок .card__front -->
+            <div class="card__front">
+                <!-- блок с относительным позиционированием, внутри которого изображение и название фильма -->
+                <div class="card__poster">
+                    <img src="image\card__image.jpg" alt="" align="center">
+                    <div class="card__title">
+                        Принцесса Мононоке
+                    </div>
+                </div>
+                <!-- блок с описанием фильма и кнопками -->
+                <div class="card__item">
+                    <div class="card__desc">
+                        фэнтези, 1997
+                    </div>
+                    <div class="card__btn_yes">Хочу посмотреть</div>
+                    <!-- при событии клика мыши - onclick - вызывается функция swipe(1); -->
+                    <div class="card__btn_no" onclick="swipe(1);">
+                        Не хочу
+                    </div>
+                </div>
+            </div>
+            <!-- блок div.card__front закончился -->
+            <!-- задняя сторона карточки - блок .card__back -->
+            <div class="card__back">
+                <div class="card__lubus">
+                    <div class="card__lubus_text">
+                        я иду за тобой...
+                    </div>
+                    <img src="image\lubus.png" alt="Изображение">
+                    <!-- при событии клика мыши - onclick - вызывается функция swipe(0); -->
+                    <div class="card__btn_again" onclick="swipe(0);">
+                        ладно, посмотрю
+                    </div>
+                </div>
+            </div>
+            <!-- блок div.card__back закончился -->
+
+        </div>
+        <!-- блок div.card закончился -->
+
+        <!-- панель карточки - блок div.card__panel -->
+        <div class="card__panel" style="display:none;">
+
+            <div class="card__panel_ball">
+                <div class="card__panel_value">
+                    <div>8.2</div>
+                </div>
+            </div>
+
+            <a href="https://www.kinopoisk.ru/film/441/">
+                <div class="card__panel_info">
+                    <img src="image\icon\info.svg" alt="">
+                </div>
+            </a>
+
+            <a href="https://hd.kinopoisk.ru/film/47c92cded6e021d28f0ec1cbe1ca6ff8?from_block=kp-button-online">
+                <div class="card__panel_play">
+                    <img src="image\icon\play.svg" alt="">
+                </div>
+            </a>
+
+        </div>
+        <!-- блок div.card__panel закончился -->
+
+    <!-- заканчивается блок .content -->
+    </div>
+    <!-- шапка с идентификатором header -->
+    <div id="header">
+        Выбор фильма
+    </div>
+    <!-- подвал с идентификатором footer -->
+    <div id="footer">
+        iengolab, 2022
+    </div>
+
+    <!-- внутри тега <script> можно использовать Javascript -->
+    <script src="js/script.js"></script>
+
+</body>
+</html>
